@@ -1,0 +1,123 @@
+set nobackup
+set autoread
+
+set incsearch "Make search act like search in modern browsers
+set magic "Set magic on, for regular expressions
+set showmatch "Show matching bracets when text indicator is over them
+set hlsearch "Hight light search
+set smartcase
+
+set cursorline
+set number
+set ruler
+set showcmd
+
+set history=500
+
+set autoindent
+set smartindent
+set smarttab
+set shiftwidth=4 tabstop=4
+
+set listchars=tab:»-,space:∙,trail:∎,eol:↲,extends:>,precedes:<
+
+set backspace=indent,eol,start
+
+set wrap
+
+set matchpairs+=<:>
+
+set foldmethod=indent
+set foldlevelstart=99
+
+" last window will always have a status line
+set laststatus=2
+
+" 文件格式
+set fileencodings=utf-8,gbk
+set fileformats=unix,dos,mac
+
+" 移除 BOM
+set nobomb
+
+" Set interactive bash as the default vim shell
+set shell=bash\ -i
+
+set updatetime=250
+
+if $TERM_PROGRAM =~ "iTerm"
+	" 设置光标
+	let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
+	let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
+endif"
+
+if has('gui_running')
+    set lines=40
+    set columns=120
+
+    set winaltkeys=no
+
+    set guioptions-=T
+    set guioptions-=m
+    set guioptions-=r
+    set guioptions-=R
+    set guioptions-=l
+    set guioptions-=L
+    set guioptions-=R
+    set guioptions-=b
+
+    if has('mac') || has('macunix')
+        set guifont=Monaco:h12
+    elseif has('win32')
+        set guifont=Consolas:h12
+    else
+        set guifont=Monaco\ 12
+    endif
+endif
+
+autocmd BufWrite * set fileformat=unix
+
+let &t_Co=256
+syntax on
+
+
+" 切换分割窗口
+map <C-k> <C-W>k
+map <C-j> <C-W>j
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" 移动分割窗口 alt + k/j/h/l
+nmap ˚ <C-W>K
+nmap ∆ <C-W>J
+nmap ˙ <C-W>H
+nmap ¬ <C-W>L
+
+" buffer 切换
+nmap <TAB> :b #<CR>
+nmap <S-TAB> :bp<CR>
+nmap <C-TAB> :bn<CR>
+
+" quickfix 窗口 alt + p/n
+map ∏ :cp<CR>
+map ˜ :cn<CR>
+
+cmap <C-p> <Up>
+cmap <C-n> <Down>
+
+inoremap jj <ESC>
+inoremap kk <ESC>
+
+" clear highlight
+nnoremap <F5> :nohlsearch<CR>
+
+" load plugins
+if filereadable(glob('~/.vimrc.plugins'))
+    source ~/.vimrc.plugins
+endif
+
+" load local settings
+if filereadable(glob('~/.vimrc.local'))
+    source ~/.vimrc.local
+endif
+

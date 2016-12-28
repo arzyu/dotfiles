@@ -1,0 +1,32 @@
+/* global: slate, _ */
+
+/* app binding keys */
+const appKeys = {
+  '1:cmd': { name: 'Finder', id: 'com.apple.finder' },
+  '2:cmd': { name: 'Google Chrome', id: 'com.google.Chrome' },
+  '3:cmd': { name: 'iTerm2', id: 'com.googlecode.iterm2' },
+  '4:cmd': { name: 'MacVim', id: 'org.vim.MacVim' },
+  '5:cmd': { name: 'GitKraken', id: 'com.axosoft.gitkraken' },
+  '6:cmd': { name: '邮件', id: 'com.apple.mail' },
+  '7:cmd': { name: 'Google Chrome', id: 'com.google.Chrome.app.Default-hmjkmjkepdijhoojdojkdfohbdgmmhki' },
+  'v:alt,shift': { name: 'VOX', id: 'com.coppertino.Vox' },
+};
+
+slate.bindAll(_.reduce(appKeys, (bindings, app, key) => {
+  bindings[key] = (win) => {
+    if (win && win.app().name() === app.name) {
+      win.doOperation('hide', { app: app.name });
+      return;
+    }
+    const command = `/usr/bin/open -b ${app.id}`;
+    slate.operation('shell', { command }).run();
+  };
+  return bindings;
+}, {}));
+
+slate.bind('r:ctrl;cmd', slate.operation('relaunch'));
+
+slate.on('appOpened', (event, app) => {
+  slate.operation('relaunch').run();
+});
+
