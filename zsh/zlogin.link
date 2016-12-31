@@ -1,0 +1,5 @@
+## for GUI application: MacVim
+if [[ -z $ZSH && -a ~/.zshrc ]]; then
+  source ~/.zshrc
+fi
+
