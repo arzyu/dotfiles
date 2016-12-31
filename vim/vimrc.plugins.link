@@ -168,8 +168,6 @@ let g:instant_markdown_autostart = 0
 
 Plugin 'vim-scripts/CursorLineCurrentWindow'
 
-Plugin 'vim-scripts/fcitx.vim'
-
 
 " All of your Plugins must be added before the following line
 call vundle#end()
