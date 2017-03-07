@@ -109,7 +109,7 @@ inoremap jj <ESC>
 inoremap kk <ESC>
 
 " clear highlight
-nnoremap <F5> :nohlsearch<CR>
+nnoremap <Esc> :nohlsearch<CR>
 
 " load plugins
 if filereadable(glob('~/.vimrc.plugins'))
