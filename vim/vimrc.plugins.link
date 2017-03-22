@@ -105,6 +105,7 @@ Plugin 'tpope/vim-surround'
 
 " Zen coding
 Plugin 'mattn/emmet-vim'
+let g:user_emmet_install_global = 0
 let g:user_emmet_settings = {
 \  'html': {
 \    'snippets': {
@@ -112,8 +113,6 @@ let g:user_emmet_settings = {
 \    }
 \  }
 \ }
-let g:user_emmet_install_global = 0
-autocmd FileType html,css,scss,js,md EmmetInstall
 
 
 " Code and files fuzzy finder
