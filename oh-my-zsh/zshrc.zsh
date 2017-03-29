@@ -51,7 +51,7 @@ ZSH_THEME="muse"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(nvm npm pip rvm gem bundler docker docker-compose)
+plugins=(nvm npm yarn pip rvm gem bundler docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
