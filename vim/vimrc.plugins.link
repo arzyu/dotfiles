@@ -105,6 +105,7 @@ Plugin 'tpope/vim-surround'
 
 " Zen coding
 Plugin 'mattn/emmet-vim'
+let g:user_emmet_leader_key = ';;'
 let g:user_emmet_settings = {
 \  'html': {
 \    'snippets': {
