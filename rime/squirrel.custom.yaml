@@ -1,0 +1,15 @@
+# Squirrel settings
+# encoding: utf-8
+
+patch:
+  us_keyboard_layout: true
+
+  style/color_scheme: google
+  style/horizontal: true
+  style/font_point: 14
+  style/border_width: 8
+  style/border_height: 8
+  style/corner_radius: 5
+
+  app_options:
+

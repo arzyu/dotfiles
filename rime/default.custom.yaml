@@ -1,0 +1,7 @@
+patch:
+  schema_list:
+    - schema: wubi98
+
+  ascii_composer/switch_key:
+    Shift_L: commit_code
+
