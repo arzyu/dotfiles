@@ -1,16 +1,21 @@
 /* global: slate, _ */
 
+/*
+app key bindings should be defined in ~/.slate.bindings.json
+
+example:
+{
+  "1:cmd": { "name": "Finder", "id": "com.apple.finder" },
+  "x:alt,shift": { "name": "xxx", "id": "com.xxx.xxx" }
+}
+
+use `lsappinfo` command to get app name and id.
+*/
+
 /* app binding keys */
-const appKeys = {
-  '1:cmd': { name: 'Finder', id: 'com.apple.finder' },
-  '2:cmd': { name: 'Google Chrome', id: 'com.google.Chrome' },
-  '3:cmd': { name: 'iTerm2', id: 'com.googlecode.iterm2' },
-  '4:cmd': { name: 'MacVim', id: 'org.vim.MacVim' },
-  '5:cmd': { name: 'GitKraken', id: 'com.axosoft.gitkraken' },
-  '6:cmd': { name: '邮件', id: 'com.apple.mail' },
-  '7:cmd': { name: 'Google Chrome', id: 'com.google.Chrome.app.Default-hmjkmjkepdijhoojdojkdfohbdgmmhki' },
-  'v:alt,shift': { name: 'VOX', id: 'com.coppertino.Vox' },
-};
+const appKeys = JSON.parse(slate.shell(
+  '/bin/cat .slate.bindings.json', true, '~'
+));
 
 slate.bindAll(_.reduce(appKeys, (bindings, app, key) => {
   bindings[key] = (win) => {
@@ -23,8 +28,6 @@ slate.bindAll(_.reduce(appKeys, (bindings, app, key) => {
   };
   return bindings;
 }, {}));
-
-slate.bind('r:ctrl;cmd', slate.operation('relaunch'));
 
 slate.on('appOpened', (event, app) => {
   slate.operation('relaunch').run();
