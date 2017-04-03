@@ -105,9 +105,6 @@ map ˜ :cn<CR>
 cmap <C-p> <Up>
 cmap <C-n> <Down>
 
-inoremap jj <ESC>
-inoremap kk <ESC>
-
 " clear highlight
 nnoremap <Esc> :nohlsearch<CR>
 
