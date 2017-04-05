@@ -41,8 +41,8 @@ engine:
   translators:
     - punct_translator
     - table_translator
-    - reverse_lookup_translator@wubi98_reverse_lookup
-    - reverse_lookup_translator@emoji_reverse_lookup
+    - reverse_lookup_translator@wubi98_lookup
+    - reverse_lookup_translator@emoji_lookup
   filters:
     - simplifier
     - uniquifier
@@ -63,9 +63,7 @@ translator:
     - "^z.*$"
     - "^[a-y]{1,2}$"
 
-reverse_lookup: [wubi98_reverse_lookup, emoji_reverse_lookup]
-
-wubi98_reverse_lookup:
+wubi98_lookup:
   dictionary: pinyin_simp
   prefix: "z"
   tips: "〔反查〕"
@@ -77,7 +75,7 @@ wubi98_reverse_lookup:
     # 如“你”字只显示 "wqiy"，而不是 "wq wqi wqiy"
     - xform/^(\S+\s)*(\S+)$/$2/
 
-emoji_reverse_lookup:
+emoji_lookup:
   dictionary: emoji
   prefix: "`"
   tips: "〔emoji〕"
