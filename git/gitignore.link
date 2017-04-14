@@ -1,7 +1,11 @@
 .DS_Store
-*~
+
 *.swp
-npm-debug.log
-.vscode/
-bower_components/
+
 node_modules/
+bower_components/
+
+yarn-error.log
+npm-debug.log
+
+.vscode/
