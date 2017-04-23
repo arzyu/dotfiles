@@ -105,8 +105,8 @@ map ˜ :cn<CR>
 cmap <C-p> <Up>
 cmap <C-n> <Down>
 
-" clear highlight
-nnoremap <Esc> :nohlsearch<CR>
+" use <Esc><Esc>/<C-[><C-[> to clear highlight
+nmap <Esc><Esc> :nohlsearch<CR>
 
 " load plugins
 if filereadable(glob('~/.vimrc.plugins'))
