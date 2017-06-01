@@ -8,11 +8,6 @@
 	pager = less -x4
 [alias]
 	lg = log --oneline --graph --pretty=format:\"%C(yellow)%h%d%Creset %C(red)%an%Creset: %s - %Cgreen(%cr)%Creset\" --date-order --all
-[merge]
-	tool = meld
-[mergetool "meld"]
-  trustExitCode = true
-  cmd = open -W -a Meld --args --auto-merge \"$PWD/$LOCAL\" \"$PWD/$BASE\" \"$PWD/$REMOTE\" --output=\"$PWD/$MERGED\"
 [push]
 	default = simple
 [filter "hawser"]
