@@ -40,9 +40,6 @@ set fileformats=unix,dos,mac
 " 移除 BOM
 set nobomb
 
-" Set interactive bash as the default vim shell
-set shell=bash\ -i
-
 set updatetime=250
 
 if $TERM_PROGRAM =~ "iTerm"
