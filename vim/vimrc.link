@@ -74,6 +74,9 @@ endif
 
 autocmd BufWrite * set fileformat=unix
 
+" auto resize splits
+autocmd VimResized * wincmd =
+
 let &t_Co=256
 syntax on
 
