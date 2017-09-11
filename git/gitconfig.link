@@ -1,7 +1,6 @@
 [user]
 	name = arzyu
 	email = arzyu@live.cn
-[color]
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim
@@ -10,10 +9,6 @@
 	lg = log --oneline --graph --pretty=format:\"%C(yellow)%h%d%Creset %C(red)%an%Creset: %s - %Cgreen(%cr)%Creset\" --date-order --all
 [push]
 	default = simple
-[filter "hawser"]
-	clean = git hawser clean %f
-	smudge = git hawser smudge %f
-	required = true
 [merge]
 	tool = vimdiff
 [mergetool "vimdiff"]
