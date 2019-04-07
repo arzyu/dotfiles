@@ -1,5 +1,5 @@
 # set language
-export LANG=zh_CN.UTF-8
+export LANG=en_US.UTF-8
 
 # change tab size
 tabs -4
@@ -14,6 +14,9 @@ bindkey -M viins '^r' history-incremental-pattern-search-backward
 bindkey -M viins '^s' history-incremental-pattern-search-forward
 bindkey '^p' up-line-or-search
 bindkey '^n' down-line-or-search
+
+# shift-TAB
+bindkey '^[[Z' reverse-menu-complete
 
 # kill Esc lag
 export KEYTIMEOUT=1
