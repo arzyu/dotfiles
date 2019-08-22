@@ -140,12 +140,6 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'heavenshell/vim-jsdoc'
 let g:jsdoc_default_mapping = 0
 
-
-Plugin 'suan/vim-instant-markdown'
-" Need install instant-markdown-d: `npm -g install instant-markdown-d`
-let g:instant_markdown_autostart = 0
-
-
 Plugin 'vim-scripts/CursorLineCurrentWindow'
 
 
