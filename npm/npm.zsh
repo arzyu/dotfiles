@@ -1,1 +1,2 @@
-export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
+export ELECTRON_MIRROR="https://cdn.npm.taobao.org/dist/electron/"
+
