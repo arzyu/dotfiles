@@ -13,4 +13,4 @@ alias tag='git tag'
 alias push='git push'
 alias pull='git pull'
 alias fetch='git fetch'
-
+alias restore='git restore'
