@@ -20,3 +20,5 @@
 	process = git-lfs filter-process
 [rebase]
 	autosquash = true
+[init]
+	defaultBranch = master
