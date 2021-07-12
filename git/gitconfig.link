@@ -22,4 +22,4 @@
 [rebase]
 	autosquash = true
 [init]
-	defaultBranch = master
+	defaultBranch = main
