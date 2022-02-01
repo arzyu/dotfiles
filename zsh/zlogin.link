@@ -1,5 +1,6 @@
-## for GUI application: MacVim
-if [[ -z $ZSH && -a ~/.zshrc ]]; then
-  source ~/.zshrc
-fi
+for file in $HOME/.dotfiles/**/*.login(N)
+do
+  source $file
+done
 
+unset file
