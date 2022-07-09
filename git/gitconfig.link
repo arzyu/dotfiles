@@ -5,6 +5,7 @@
 	excludesfile = ~/.gitignore
 	editor = vim
 	pager = less -x4
+	quotepath = false
 [alias]
 	lg = log --oneline --graph --pretty=format:\"%C(yellow)%h%d%Creset %C(red)%an%Creset: %s - %Cgreen(%cr)%Creset\" --date-order --all
 [push]
