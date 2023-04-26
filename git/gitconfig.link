@@ -7,6 +7,11 @@
 	pager = less -x4
 	quotepath = false
 [alias]
+	ci = commit
+	co = checkout
+	df = diff
+	rb = rebase
+	st = status
 	lg = log --oneline --graph --pretty=format:\"%C(yellow)%h%d%Creset %C(red)%an%Creset: %s - %Cgreen(%cr)%Creset\" --date-order --all
 [push]
 	default = simple
